@@ -1,6 +1,3 @@
-const app = require('./app');
-
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Serveur prêt sur http://localhost:${PORT}`);
+require('./app').listen(3000, () => {
+  console.log('Serveur prêt sur http://localhost:3000');
 });

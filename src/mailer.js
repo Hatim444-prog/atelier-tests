@@ -1,5 +1,3 @@
-async function envoyer(email, message) {
+exports.envoyer = async () => {
   throw new Error('SMTP non configuré');
-}
-
-module.exports = { envoyer };
+};
