@@ -6,6 +6,10 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+  res.redirect('/login.html');
+});
+
 app.get('/users/:id', async (req, res) => {
   const { id } = req.params;
   if (!/^\d+$/.test(id)) {
