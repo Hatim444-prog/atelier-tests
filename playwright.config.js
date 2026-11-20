@@ -1,0 +1,17 @@
+const { defineConfig } = require('@playwright/test');
+
+module.exports = defineConfig({
+  testDir: './e2e',
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }]
+  ],
+  use: {
+    baseURL: 'http://localhost:3000',
+  },
+  webServer: {
+    command: 'node src/server.js',
+    url: 'http://localhost:3000',
+    reuseExistingServer: true,
+  },
+});
